@@ -5,10 +5,25 @@
         <meta name="viewport" content="width=device-width">
         <title>Game Of Thrones Quiz App</title>
         <meta name="description" content="Test your game of thrones knowledge">
-        <link href="index.css" rel="stylesheet" type="text/css"/>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="index.js"></script>
     </head>
-    <body></body>
+    <body>
+        <header role="banner">
+            <div class="knowledge">
+                <ul>
+                    <li>Question: <span class="questionNumber">0</span>/10</li>
+                    <li>Score: <span class="score">0</span></li>
+                </ul>
+            </div>
+        </header>
+        <main role="main">
+            <section class="start-quiz js-start-quiz">
+                <h1>How good is your Game Of Thrones knowledge?</h1>
+                <button id="start">START</button>
+            </section>
+        </main>
+    </body>
     </html>

@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Grenze', serif;
+    background-color: white;
+    background: url('http://freebeacon.com/wp-content/uploads/2015/02/throne-2.jpg') no-repeat fixed;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    color: white;
+    font-size: 22px;
+}
+
+header ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.start-quiz {
+    color: white;
+}
+
+
