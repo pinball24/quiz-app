@@ -30,10 +30,12 @@ header {
 }
 
 .feedback {
+    color: black;
     margin: 0 auto;
     width: 70%;
     text-align: center;
     padding-top: 30px;
+    background: white;
 }
 
 .feedback img {
@@ -41,6 +43,6 @@ header {
     height: 150px;
 }
 
-.nextButton {
-    width: 150px;
+.restartButton {
+    width: 100%;
 }
