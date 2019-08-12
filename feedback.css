@@ -10,6 +10,7 @@ html, body {
 
 body {
     font-family: 'Grenze', serif;
+    background-color: white;
     background: url('http://freebeacon.com/wp-content/uploads/2015/02/throne-2.jpg') no-repeat fixed;
     background-size: cover;
 }
@@ -22,27 +23,24 @@ header {
 }
 
 .main {
-    display: flex;
-    align-items: center;
-    color: white;
-    height: 50%;
-}
-
-fieldset {
-    border: none;
-}
-
-.question-form {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    height: 50px;
-}
-
-.answerOption {
     display: block;
-    text-align: left;
+    color: white;
+    margin-bottom: 
 }
+
+.feedback {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.feedback img {
+    width: 150px;
+    height: 150px;
+}
+
+.nextButton {
+    width: 150px;
+}
+
