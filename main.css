@@ -54,4 +54,10 @@ button:hover {
     background-color: purple;
 }
 
+footer  ul li a {
+    color: white;
+    margin-left: 50px;
+    font-size: 30px;
+}
+
 
