@@ -45,4 +45,27 @@ fieldset {
 .answerOption {
     display: block;
     text-align: left;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid;
+}
+
+input {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+label:hover, label:focus {
+    background-color: purple;
+}
+
+.submitButton {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.submitButton:hover, .submitButton:focus {
+    background-color: purple;
 }
