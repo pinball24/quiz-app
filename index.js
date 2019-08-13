@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 const STORE = [
     {
@@ -105,3 +105,54 @@ const ANSWERS = [
     `Beyond the wall`,
     `Bran Stark`
 ];
+
+let questionNumber = 0;
+let score = 0;
+
+function generateQuestion() {
+    return `
+    <section class="question-form js-question-form">
+    <h2>Question?</h2>
+    <form>
+        <fieldset>
+            <label class="answerOption">
+                <input type="radio" value="questionNumber" name="answer" required>
+                <span>answer</span>
+            </label>
+            <label class="answerOption">
+                <input type="radio" value="questionNumber" name="answer" required>
+                <span>answer</span>
+            </label>
+            <label class="answerOption">
+                <input type="radio" value="questionNumber" name="answer" required>
+                <span>answer</span>
+            </label>
+            <label class="answerOption">
+                <input type="radio" value="questionNumber" name="answer" required>
+                <span>answer</span>
+            </label>
+        </fieldset>
+    </form>
+</section>`;
+}
+
+function handleStartButton() {
+    $('.js-start-quiz').on('click', '.start-button' function(event) {
+        nextQuestion();
+    });
+}
+
+function nextQuestion() {
+    const question = STORE[questionNumber - 1];
+    const questionsAnswered = questionNumber - 1;
+    $('js-main').html(generateQuestion());
+}
+
+function handleButtons() {
+    handleStartButton();
+    handleSubmitButton();
+    handleNextButton();
+    handleRestartButton();
+}
+
+handleButtons(); */
