@@ -22,8 +22,6 @@ header {
 }
 
 .main {
-    display: flex;
-    align-items: center;
     color: white;
     height: 50%;
 }
