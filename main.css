@@ -18,19 +18,20 @@ body {
 header {
     width: 100%;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.knowledge {
+    display: none;
 }
 
 header ul li {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     list-style: none;
 }
 
 h1 {
     text-align: center;
-
 }
 
 .start-quiz {
@@ -40,18 +41,97 @@ h1 {
 }
 
 button {
-    margin-top: 30px;
     padding: 9px;
     border: none;
     border-radius: 3px;
     color: white;
     background-color: rgb(8, 61, 141);
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 button:hover {
     cursor: pointer;
     background-color: purple;
+}
+
+.main {
+    color: white;
+    height: 30%;
+}
+
+fieldset {
+    border: none;
+}
+
+h2 {
+    padding: 10px;
+    border: 2px solid white;
+    margin-bottom: 5px;
+    background-color: blue;
+}
+
+.question-form {
+    display: none;
+    flex-direction: column;
+    align-content: space-around;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    height: 50px;
+    width: 50%;
+}
+
+.answerOption {
+    display: block;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 5px;
+    border: 2px solid;
+}
+
+input {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+label {
+    font-size: 20px;
+    background-color: blue;
+}
+
+label:hover, label:focus {
+    background-color: purple;
+}
+
+.submitButton {
+    width: 100%;
+    font-size: 20px;
+}
+
+.submitButton:hover, .submitButton:focus {
+    background-color: purple;
+}
+
+.feedback-page {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.feedback-page img {
+    width: 150px;
+    height: 150px;
+}
+
+.nextButton {
+    width: 150px;
+}
+
+.restartButton {
+    width: 100%;
 }
 
 footer  ul li a {

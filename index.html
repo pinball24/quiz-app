@@ -7,30 +7,34 @@
         <meta name="description" content="Test your game of thrones knowledge">
         <link href="main.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
-        <script type ="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script
+			  src="http://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
         <script type ="text/javascript" src="index.js"></script>
     </head>
     <body>
         <header role="banner">
-            <div class="knowledge">
+            <section class="knowledge">
                 <ul>
                     <li>Question: <span class="questionNumber">0</span>/10</li>
                     <li>Score: <span class="score">0</span></li>
                 </ul>
-            </div>
+            </section>
         </header>
-        <main role="main" class="main js-main">
+        <main role="main" class="main">
             <section class="start-quiz js-start-quiz">
                 <h1>Game Of Thrones quiz!</h1>
-                <button type="button" id="start-button js-start-button">START</button>
+                <button type="button" id="start-button">START</button>
             </section>
+            <section class="question-form"></section>
         </main>
-        <footer>
+        <!-- <footer>
             <ul>
                 <li><a href="questionForm.html">questions page</a></li>
                 <li><a href="feedbackForm.html">feedback page</a></li>
                 <li><a href="resultsPage.html">results page</a></li>
             </ul>
-        </footer>
+        </footer> -->
     </body>
     </html>
