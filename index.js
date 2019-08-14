@@ -210,7 +210,7 @@ function incorrectFeedbackTemplate() {
     return `
     <section class="feedback-page">
         <img src="${STORE[questionNumber - 1].logo}" alt="${STORE[questionNumber - 1].alt}"/>
-        <p>Sorry you got it wrong!</p>
+        <p>Sorry you got it wrong! The correct answer is ${STORE[questionNumber - 1]}</p>
         <button class="nextButton" type="button">Next</button>
     </section>
  `;

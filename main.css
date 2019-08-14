@@ -116,9 +116,10 @@ label:hover, label:focus {
 
 .feedback-page {
     margin: 0 auto;
-    width: 70%;
+    width: 100%;
     text-align: center;
     padding-top: 30px;
+    background-color: rgb(37, 36, 36);
 }
 
 .feedback-page img {
