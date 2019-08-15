@@ -159,7 +159,6 @@ function generateQuestion() {
 function handleStartButton() {
     $('.js-start-quiz').on('click', '#start-button', function(event) {
         $('.js-start-quiz').remove();
-        $('questionNumber').text(1);
         $('.question-form').css('display', 'flex');
         $('.knowledge').css('display', 'flex');
         nextQuestion();
@@ -181,18 +180,19 @@ function checkAnswer(answer) {
 
 function handleSubmitButton() {
     $('body').on('click', '.submitButton', function (event) {
-        event.preventDefault();
-        const answer = $('input:checked').val(); 
-        console.log(answer);
-        const isUserCorrect = checkAnswer(answer);
- 
-        if(isUserCorrect) {
-            renderCorrectFeedback();
-            score++
-            $('.score').text(score);
-        } else {
-            renderWrongFeedback();
-        }
+        const form = $(this).closest('form');
+        form.on('submit', event => {
+          const answer = $('input:checked').val(); 
+          console.log(answer);
+          const isUserCorrect = checkAnswer(answer);
+          if(isUserCorrect) {
+              renderCorrectFeedback();
+              score++
+              $('.score').text(score);
+          } else {
+              renderWrongFeedback();
+          }
+        })
     });
 }
 
@@ -210,7 +210,7 @@ function incorrectFeedbackTemplate() {
     return `
     <section class="feedback-page">
         <img src="${STORE[questionNumber - 1].logo}" alt="${STORE[questionNumber - 1].alt}"/>
-        <p>Sorry you got it wrong! The correct answer is ${STORE[questionNumber - 1]}</p>
+        <p>Sorry you got it wrong! The correct answer is ${ANSWERS[questionNumber - 1]}</p>
         <button class="nextButton" type="button">Next</button>
     </section>
  `;

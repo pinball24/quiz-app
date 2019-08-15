@@ -22,6 +22,10 @@ header {
     padding: 10px;
 }
 
+#start-button {
+    margin-top: 15px;
+}
+
 .knowledge {
     display: none;
 }
@@ -36,7 +40,7 @@ h1 {
 
 .start-quiz {
     color: white;
-    margin-top: 100px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -115,11 +119,10 @@ label:hover, label:focus {
 }
 
 .feedback-page {
-    margin: 0 auto;
-    width: 100%;
+    margin: auto;
+    /* width: 100%; */
     text-align: center;
     padding-top: 30px;
-    background-color: rgb(37, 36, 36);
 }
 
 .feedback-page img {
@@ -135,10 +138,27 @@ label:hover, label:focus {
     width: 100%;
 }
 
-footer  ul li a {
-    color: white;
-    margin-left: 50px;
-    font-size: 30px;
+@media screen and (min-width: 680px) {
+    header {
+        font-size: 25px;
+    }
+
+    .feedback-page img {
+        width: 250px;
+        height: 250px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
 }
 
 
