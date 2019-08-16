@@ -8,6 +8,11 @@ html, body {
     height: 100%;
 }
 
+p {
+    background-color: #99C7B6;
+    border: 2px solid;
+}
+
 body {
     font-family: 'Grenze', serif;
     background-color: white;
@@ -46,10 +51,10 @@ h1 {
 
 button {
     padding: 9px;
-    border: none;
+    border: 2px solid;
     border-radius: 3px;
-    color: white;
-    background-color: rgb(8, 61, 141);
+    color: black;
+    background-color: #99C7B6;
     font-size: 16px;
     margin-bottom: 10px;
 }
@@ -60,7 +65,7 @@ button:hover {
 }
 
 .main {
-    color: white;
+    color: black;
     height: 30%;
 }
 
@@ -70,9 +75,15 @@ fieldset {
 
 h2 {
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid;
     margin-bottom: 5px;
-    background-color: blue;
+    background-color: #99C7B6;
+}
+
+h3 {
+    background-color: #99C7B6;
+    margin-bottom: 5px;
+    border: 2px solid;
 }
 
 .question-form {
@@ -102,7 +113,7 @@ input {
 
 label {
     font-size: 20px;
-    background-color: blue;
+    background-color: #99C7B6;
 }
 
 label:hover, label:focus {
@@ -112,6 +123,7 @@ label:hover, label:focus {
 .submitButton {
     width: 100%;
     font-size: 20px;
+    border: 2px solid;
 }
 
 .submitButton:hover, .submitButton:focus {
@@ -120,7 +132,6 @@ label:hover, label:focus {
 
 .feedback-page {
     margin: auto;
-    /* width: 100%; */
     text-align: center;
     padding-top: 30px;
 }
@@ -128,14 +139,17 @@ label:hover, label:focus {
 .feedback-page img {
     width: 150px;
     height: 150px;
+    border: 5px solid black;
 }
 
 .nextButton {
-    width: 150px;
+    margin-top: 5px;
+    width: 100%;
 }
 
 .restartButton {
     width: 100%;
+    margin-top: 5px;
 }
 
 @media screen and (min-width: 680px) {

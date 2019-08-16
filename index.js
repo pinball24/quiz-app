@@ -125,30 +125,31 @@ const ANSWERS = [
     `Bran Stark`
 ];
 
+let questionIndex = 0;
 let questionNumber = 1;
 let score = 0;
 
 function generateQuestion() {
         return `
 <section class="question">
- <h2>${STORE[questionNumber - 1].text}</h2>
+ <h2>${STORE[questionIndex].text}</h2>
     <form>
         <fieldset>
             <label class="answerOption">
-                <input type="radio" value="${STORE[questionNumber - 1].answer1}" name="answer" required>
-                <span>${STORE[questionNumber - 1].answer1}</span>
+                <input type="radio" value="${STORE[questionIndex].answer1}" name="answer" required>
+                <span>${STORE[questionIndex].answer1}</span>
             </label>
             <label class="answerOption">
-                <input type="radio" value="${STORE[questionNumber - 1].answer2}" name="answer" required>
-                <span>${STORE[questionNumber - 1].answer2}</span>
+                <input type="radio" value="${STORE[questionIndex].answer2}" name="answer" required>
+                <span>${STORE[questionIndex].answer2}</span>
             </label>
             <label class="answerOption">
-                <input type="radio" value="${STORE[questionNumber - 1].answer3}" name="answer" required>
-                <span>${STORE[questionNumber - 1].answer3}</span>
+                <input type="radio" value="${STORE[questionIndex].answer3}" name="answer" required>
+                <span>${STORE[questionIndex].answer3}</span>
                </label>
             <label class="answerOption">
-                <input type="radio" value="${STORE[questionNumber - 1].answer4}" name="answer" required>
-                <span>${STORE[questionNumber - 1].answer4}</span>
+                <input type="radio" value="${STORE[questionIndex].answer4}" name="answer" required>
+                <span>${STORE[questionIndex].answer4}</span>
             </label>
             <button type="submit" class="submitButton">Submit</button>
            </fieldset>
@@ -171,7 +172,7 @@ function nextQuestion() {
 }
 
 function checkAnswer(answer) {
-    if(answer === ANSWERS[questionNumber - 1]) {
+    if(answer === ANSWERS[questionIndex]) {
         return true;
     } else {
         return false;
@@ -199,7 +200,7 @@ function handleSubmitButton() {
 function correctFeedbackTemplate() {
     return `
     <section class="feedback-page">
-        <img src="${STORE[questionNumber - 1].logo}" alt="${STORE[questionNumber -1].alt}"/>
+        <img src="${STORE[questionIndex].logo}" alt="${STORE[questionIndex].alt}"/>
         <p>You got it correct!</p>
         <button class="nextButton" type="button">Next</button>
     </section>
@@ -209,8 +210,8 @@ function correctFeedbackTemplate() {
 function incorrectFeedbackTemplate() {
     return `
     <section class="feedback-page">
-        <img src="${STORE[questionNumber - 1].logo}" alt="${STORE[questionNumber - 1].alt}"/>
-        <p>Sorry you got it wrong! The correct answer is ${ANSWERS[questionNumber - 1]}</p>
+        <img src="${STORE[questionIndex].logo}" alt="${STORE[questionIndex].alt}"/>
+        <p>Sorry you got it wrong! The correct answer is ${ANSWERS[questionIndex]}</p>
         <button class="nextButton" type="button">Next</button>
     </section>
  `;
@@ -256,6 +257,7 @@ function handleNextButton() {
     $('body').on('click', '.nextButton', function(event) {
     if (questionNumber < 10) {
         questionNumber++
+        questionIndex++
         nextQuestion()
     } else if (score >= 8) {
         renderResults();
